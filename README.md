@@ -1,1 +1,1 @@
-# Flutter UI based on Milky Way Galaxy 
+# Flutter UI based on Solar System
