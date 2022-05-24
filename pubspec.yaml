@@ -8,14 +8,14 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.16.2 <3.0.0"
 
-dependencies:
-  appinio_swiper: ^1.0.3
+dependencies: 
+  flutter_swiper: ^1.1.6
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  
 
 dev_dependencies:
-
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter

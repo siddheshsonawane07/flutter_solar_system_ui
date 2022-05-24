@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:milky_way/pages/detailpage.dart';
 
 import '../constants/constants.dart';
 import '../models/model.dart';
@@ -72,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   itemCount: planets.length,
                   itemWidth: MediaQuery.of(context).size.width - 2 * 64,
                   layout: SwiperLayout.STACK,
-                  pagination: SwiperPagination(
+                  pagination: const SwiperPagination(
                     builder:
                         DotSwiperPaginationBuilder(activeSize: 20, space: 8),
                   ),
