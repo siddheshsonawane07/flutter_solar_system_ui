@@ -80,22 +80,24 @@ class DetailPage extends StatelessWidget {
                     height: 250,
                     padding: const EdgeInsets.only(left: 32.0),
                     child: ListView.builder(
-                        itemCount: planetInfo.images.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return Card(
-                            clipBehavior: Clip.antiAlias,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(24),
+                      itemCount: planetInfo.images.length,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Card(
+                          clipBehavior: Clip.antiAlias,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(24),
+                          ),
+                          child: AspectRatio(
+                            aspectRatio: 1,
+                            child: Image.network(
+                              planetInfo.images[index],
+                              fit: BoxFit.cover,
                             ),
-                            child: AspectRatio(
-                                aspectRatio: 1,
-                                child: Image.network(
-                                  planetInfo.images[index],
-                                  fit: BoxFit.cover,
-                                )),
-                          );
-                        }),
+                          ),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

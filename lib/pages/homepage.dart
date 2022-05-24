@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                             'Solar System',
                             style: TextStyle(
                               fontFamily: 'Avenir',
-                              fontSize: 24,
+                              fontSize: 20,
                               color: Color(0x7cdbf1ff),
                               fontWeight: FontWeight.w500,
                             ),
@@ -71,15 +71,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               Container(
-                height: 500,
-                padding: const EdgeInsets.only(left: 32),
+                height: 430,
+                padding: const EdgeInsets.fromLTRB(32, 0, 0, 10),
                 child: Swiper(
                   itemCount: planets.length,
                   itemWidth: MediaQuery.of(context).size.width - 2 * 64,
                   layout: SwiperLayout.STACK,
                   pagination: const SwiperPagination(
                     builder:
-                        DotSwiperPaginationBuilder(activeSize: 20, space: 8),
+                        DotSwiperPaginationBuilder(activeSize: 14, space: 8),
                   ),
                   itemBuilder: (context, index) {
                     return InkWell(
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                           context,
                           PageRouteBuilder(
                             pageBuilder: (context, a, b) => DetailPage(
-                              planetInfo: planets[index], key: null,
+                              planetInfo: planets[index],
                             ),
                           ),
                         );
@@ -110,13 +110,13 @@ class _HomePageState extends State<HomePage> {
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
                                     children: <Widget>[
-                                      const SizedBox(height: 100),
+                                      const SizedBox(height: 80),
                                       Text(
                                         planets[index].name,
                                         // ignore: prefer_const_constructors
                                         style: TextStyle(
                                           fontFamily: 'Avenir',
-                                          fontSize: 44,
+                                          fontSize: 40,
                                           color: const Color(0xff47455f),
                                           fontWeight: FontWeight.w900,
                                         ),
@@ -188,11 +188,11 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.vertical(
-            top: Radius.circular(36.0),
+            top: Radius.circular(0.0),
           ),
           color: navigationColor,
         ),
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
