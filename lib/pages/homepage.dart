@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:milky_way/pages/detailpage.dart';
 
@@ -19,11 +20,13 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: gradientEndColor,
       body: Container(
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                colors: [gradientStartColor, gradientEndColor],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                stops: const [0.3, 0.7])),
+          gradient: LinearGradient(
+            colors: [gradientStartColor, gradientEndColor],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: const [0.3, 0.7],
+          ),
+        ),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
